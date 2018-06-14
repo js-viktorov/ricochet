@@ -2,6 +2,7 @@ var lib = require('./lib/entry.js');
 
 lib.wsserver({
 	"/api":lib.wsserver.collectHandler((data,res,req,rqSender)=>{
+		console.log('Processing request');
 		res.writeHeaders = headers=>res.writeHead(200,headers);
 		res.error = code=>{
 			res.statusCode = code;
