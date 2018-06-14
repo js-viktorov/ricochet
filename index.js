@@ -9,5 +9,5 @@ lib.wsserver({
 			res.end();
 		};
 		rqSender(data).into(res).end();
-	},lib.fixedproxy.integral(lib.requestOptions.toProxy)),
+	},lib.fixedproxy.integral(lib.requestOptions.tgDirectOptions)),
 },{},process.env.PORT || 8080).then(port=>log(`App up on http://localhost:${port}`));
